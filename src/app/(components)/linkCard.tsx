@@ -12,7 +12,7 @@ export default function LinkCard(props: LinkProps) {
       border-gray-300 dark:border-gray-800 border-1 rounded-full shadow-md shadow-indigo-400/20 
       xl:shadow-none xl:hover:shadow-md xl:hover:shadow-indigo-400/30 transition transform hover:-translate-y-1.5"
     >
-      <span className="text-[var(--destak)] text-xl md:text-2xl">{props.children}</span>
+      <span className="text-indigo-400 text-xl md:text-2xl">{props.children}</span>
       <h3 className="text-sm md:text-x">{props.title}</h3>
     </a>
   );

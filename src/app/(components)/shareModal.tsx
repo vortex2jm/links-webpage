@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { BsWhatsapp } from "react-icons/bs";
+import toast from "react-hot-toast";
 import { BsShare } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 import { MdContentCopy } from "react-icons/md";
 import { LuArrowDownFromLine } from "react-icons/lu";
-import toast from "react-hot-toast";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ShareModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ export default function ShareModal() {
       <button
         onClick={() => setIsOpen(true)}
         aria-label="Compartilhar"
-        className="text-[var(--destak)] mt-10 p-4 rounded-full shadow-md shadow-indigo-400/20 dark:shadow-none transition cursor-pointer transform hover:-translate-y-1.5"
+        className="text-indigo-400 mt-10 p-4 rounded-full shadow-none transition cursor-pointer transform hover:-translate-y-1.5"
       >
         <BsShare size={24} />
       </button>
@@ -52,7 +52,7 @@ export default function ShareModal() {
               className="fixed bottom-24 z-50 w-72 rounded-4xl p-6 shadow-lg border-1 border-gray-800 bg-gray-800"
               onClick={(e) => e.stopPropagation()}
             >
-              <h2 className="text-xl font-bold mb-4 text-[var(--destak)] text-center">Compartilhar</h2>
+              <h2 className="text-xl font-geist font-bold mb-4 text-indigo-400 text-center">Compartilhar</h2>
               <ul className="flex flex-col gap-4">
                 <li>
                   <button
@@ -77,7 +77,7 @@ export default function ShareModal() {
 
               <button
                 onClick={() => setIsOpen(false)}
-                className="mt-4 w-full flex justify-center items-center text-[var(--destak)] rounded-full py-2 transition cursor-pointer transform hover:-translate-y-1"
+                className="mt-4 w-full flex justify-center items-center text-indigo-400 rounded-full py-2 transition cursor-pointer transform hover:-translate-y-1"
               >
                 <LuArrowDownFromLine size={30} />
               </button>

@@ -1,11 +1,13 @@
-import LinkCard from "./(components)/linkCard";
-import { FaInstagram } from "react-icons/fa";
-import { BsGlobe } from "react-icons/bs";
+import Image from "next/image";
+
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaGear } from "react-icons/fa6";
-import Image from "next/image";
+import { FaInstagram } from "react-icons/fa";
+import { GrPersonalComputer } from "react-icons/gr";
+
+import LinkCard from "./(components)/linkCard";
 import ShareModal from "./(components)/shareModal";
+
 
 export const metadata = {
   title: "João Clevelares - Links",
@@ -28,6 +30,29 @@ export const metadata = {
   },
 };
 
+const links = [
+  {
+    title: "GitHub",
+    url: "https://github.com/vortex2jm",
+    icon: <FaGithub />,
+  },
+  {
+    title: "LinkedIn",
+    url: "https://www.linkedin.com/in/joão-clevelares-287b04279",
+    icon: <FaLinkedin />,
+  },
+  {
+    title: "Instagram",
+    url: "https://instagram.com/joao_p_moura",
+    icon: <FaInstagram />,
+  },
+  {
+    title: "Soluções de Software",
+    url: "https://cyvex.com.br",
+    icon: <GrPersonalComputer />,
+  },
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen w-screen pt-10 pb-10 flex flex-col justify-center items-center">
@@ -37,30 +62,16 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col justify-center items-center mb-10 text-cente">
-        <h2 className="font-sans font-bold text-2xl">João Clevelares</h2>
-        <div className="w-15 h-0.5 bg-[var(--destak)] mx-auto mt-1 rounded-full" />
+        <h2 className="font-geist font-bold text-2xl">João Clevelares</h2>
+        <div className="w-15 h-0.5 bg-indigo-400 mx-auto mt-1 rounded-full" />
       </div>
 
       <div className="h-fit w-m flex flex-col justify-center items-stretch rounded-xl gap-6">
-        <LinkCard title="Soluções de Software" link="https://cyvex.com.br">
-          <FaGear />
-        </LinkCard>
-
-        <LinkCard title="Website" link="https://joaoclev.dev.br">
-          <BsGlobe />
-        </LinkCard>
-
-        <LinkCard title="LinkedIn" link="https://www.linkedin.com/in/joão-clevelares-287b04279">
-          <FaLinkedin />
-        </LinkCard>
-
-        <LinkCard title="GitHub" link="https://github.com/vortex2jm">
-          <FaGithub />
-        </LinkCard>
-
-        <LinkCard title="Instagram" link="https://instagram.com/joao_p_moura">
-          <FaInstagram />
-        </LinkCard>
+        {links.map((link, index) => (
+          <LinkCard key={index} title={link.title} link={link.url}>
+            {link.icon}
+          </LinkCard>
+        ))}
       </div>
 
       <ShareModal />
