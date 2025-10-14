@@ -14,20 +14,31 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "João - Links",
-  description: "Links de João Clevelares",
-  icons: {
-    icon: "favicon.svg"
-  }
+  title: "João Clevelares | LinkTree",
+  description: "Conecte-se com João",
+  
+  openGraph: {
+    title: "João Clevelares | LinkTree",
+    description: "Conecte-se com João",
+    url: "https://links.joaoclev.dev.br",
+    siteName: "João - Links",
+    images: [
+      {
+        url: "https://github.com/vortex2jm.png",
+        width: 500,
+        height: 500,
+        alt: "Profile photo",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body
         className={`${geistSans.variable} ${notoSans.variable} antialiased`}
       >
@@ -35,6 +46,17 @@ export default function RootLayout({
         <Toaster
           position="top-center"
           reverseOrder={false}
+          toastOptions={{
+            success: {
+              style: {
+                background: "#f0f0f0"
+              },
+              iconTheme: {
+                primary: "#000",
+                secondary: "#fff"
+              }
+            }
+          }}
         />
       </body>
     </html>
