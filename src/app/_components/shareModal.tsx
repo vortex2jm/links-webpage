@@ -9,11 +9,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function ShareModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const shareUrl = "https://links.joaoclev.dev.br";
+  const shareUrl = window.location.origin;
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(shareUrl);
-    setIsOpen(false)
+    setIsOpen(false);
     toast.success('Link copiado!', {
       style: {
         borderRadius: "50px"
@@ -30,7 +30,6 @@ export default function ShareModal() {
       >
         <BsShare size={24} />
       </button>
-
       <AnimatePresence>
         {isOpen && (
           <>
@@ -42,7 +41,6 @@ export default function ShareModal() {
               onClick={() => setIsOpen(false)}
               className="fixed inset-0 bg-opacity-30 backdrop-blur-sm z-40"
             />
-
             {/* Modal */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -52,7 +50,9 @@ export default function ShareModal() {
               className="fixed bottom-24 z-50 w-72 rounded-4xl p-6 py-10 shadow-lg bg-black dark:bg-white"
               onClick={(e) => e.stopPropagation()}
             >
-              <h2 className="text-2xl font-geist font-bold mb-2 text-white dark:text-black text-center">Compartilhar</h2>
+              <h2 className="text-2xl font-geist font-bold mb-2 text-white dark:text-black text-center">
+                Compartilhar
+              </h2>
               <div className="w-15 h-0.5 bg-amber-700 mx-auto mb-4 rounded-full" />
               <ul className="flex flex-col gap-4">
                 <li>

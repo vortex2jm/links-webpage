@@ -1,9 +1,9 @@
 import React from "react";
 
 interface LinkProps {
-  children: React.ReactNode 
-  title: string
   link: string 
+  title: string
+  children: React.ReactNode 
 }
 
 export default function LinkCard(props: LinkProps) {
