@@ -1,15 +1,20 @@
 "use client";
 
-import { useState } from "react";
 import toast from "react-hot-toast";
 import { BsShare } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
+import { useEffect, useState } from "react";
 import { MdContentCopy } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ShareModal() {
-  const [isOpen, setIsOpen] = useState(false);
-  const shareUrl = window.location.origin;
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [shareUrl, setShareUrl] = useState<string>("");
+  
+  // Mitigating window no definition error (ssr pre-rendering)
+  useEffect(() => {
+    setShareUrl(window.location.origin);
+  }, [])
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(shareUrl);
