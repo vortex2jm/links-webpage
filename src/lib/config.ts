@@ -21,7 +21,7 @@ interface User {
 export const links: Link[] = [
   {
     title: "Página Pessoal",
-    url: "https://joaoclev.dev.br",
+    url: "https://joaoclev.com",
     icon: IoGlobeOutline
   },
   // {
@@ -36,7 +36,7 @@ export const links: Link[] = [
   },
   {
     title: "LinkedIn",
-    url: "https://www.linkedin.com/in/joão-clevelares-287b04279",
+    url: "https://www.linkedin.com/in/joaoclevelares",
     icon: FaLinkedin
   },
   {
