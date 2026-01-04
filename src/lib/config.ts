@@ -1,9 +1,8 @@
 import { IconType } from "react-icons";
+import { FaBlog } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { PiEyeFill } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
-import { IoEyeSharp } from "react-icons/io5";
-import { FaBlog, FaEye } from "react-icons/fa";
 import { IoGlobeOutline } from "react-icons/io5";
 import { GrPersonalComputer } from "react-icons/gr";
 
@@ -19,16 +18,6 @@ interface User {
 }
 
 export const links: Link[] = [
-  {
-    title: "Página Pessoal",
-    url: "https://joaoclev.com",
-    icon: IoGlobeOutline
-  },
-  // {
-  //   title: "Blog",
-  //   url: "https://",
-  //   icon: FaBlog
-  // },
   {
     title: "GitHub",
     url: "https://github.com/vortex2jm",
@@ -48,7 +37,17 @@ export const links: Link[] = [
     title: "CyVex",
     url: "https://cyvex.com.br",
     icon: GrPersonalComputer
-  }
+  },
+  {
+    title: "Blog",
+    url: "https://blog.joaoclev.com",
+    icon: FaBlog
+  },
+  {
+    title: "Página Pessoal",
+    url: "https://joaoclev.com",
+    icon: IoGlobeOutline
+  },
 ];
 
 export const user: User = {

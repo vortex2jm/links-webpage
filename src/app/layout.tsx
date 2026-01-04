@@ -14,11 +14,11 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "João Clevelares | LinkTree",
-  description: "Conecte-se com João",
+  title: "João Clevelares | Links",
+  description: "Conecte-se com João.",
   
   openGraph: {
-    title: "João Clevelares | LinkTree",
+    title: "João Clevelares | Links",
     description: "Conecte-se com João",
     url: "https://links.joaoclev.dev.br",
     siteName: "João - Links",
@@ -32,6 +32,18 @@ export const metadata: Metadata = {
     ],
     locale: "pt_BR",
     type: "website",
+  },
+
+  twitter: {
+    card: "summary",
+    title: "João Clevelares | Links",
+    description: "Conecte-se com João.",
+    images: ["https://github.com/vortex2jm.png"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

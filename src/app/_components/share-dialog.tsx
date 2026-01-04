@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { MdContentCopy } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function ShareModal() {
+export default function ShareDialog() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [shareUrl, setShareUrl] = useState<string>("");
   

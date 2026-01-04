@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { links, user } from "../lib/config";
-import LinkCard from "./_components/linkCard";
-import ShareModal from "./_components/shareModal";
+import LinkCard from "./_components/link-button";
+import ShareDialog from "./_components/share-dialog";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
           )
       })}
       </div>
-      <ShareModal />
+      <ShareDialog />
     </div>
   );
 }
