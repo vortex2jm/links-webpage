@@ -29,6 +29,11 @@ export const links: Link[] = [
     icon: FaLinkedin
   },
   {
+    title: "Blog",
+    url: "https://blog.joaoclev.com",
+    icon: FaBlog
+  },
+  {
     title: "Criamus",
     url: "https://criamus.com",
     icon: PiEyeFill
@@ -39,12 +44,7 @@ export const links: Link[] = [
     icon: GrPersonalComputer
   },
   {
-    title: "Blog",
-    url: "https://blog.joaoclev.com",
-    icon: FaBlog
-  },
-  {
-    title: "Página Pessoal",
+    title: "Resume",
     url: "https://joaoclev.com",
     icon: IoGlobeOutline
   },
@@ -52,5 +52,5 @@ export const links: Link[] = [
 
 export const user: User = {
   name: "João Clevelares",
-  description: "Técnico Eletromecânico, Engenheiro de Computação em formação, Cofundador da Criamus e Fundador da CyVex."
+  description: "Computer Engineer and Electromechanical Technician."
 };
