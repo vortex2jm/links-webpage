@@ -6,7 +6,7 @@ import ShareDialog from "./_components/share-dialog";
 export default function Home() {
   return (
     <div className="min-h-screen w-screen pt-10 pb-10 flex flex-col justify-center items-center">
-      <div className="mb-10">
+      <div className="mb-10 rounded-full overflow-hidden">
         <Image src={"https://avatars.githubusercontent.com/u/93965248?v=4"} alt="profile photo" width={150} height={150} priority></Image>
       </div>
       <div className="flex flex-col justify-center items-center mb-10 text-center">

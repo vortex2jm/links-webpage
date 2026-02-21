@@ -52,5 +52,5 @@ export const links: Link[] = [
 
 export const user: User = {
   name: "João Clevelares",
-  description: "Computer Engineer and Electromechanical Technician."
+  description: "Computer Engineer | Electromechanical Technician."
 };
