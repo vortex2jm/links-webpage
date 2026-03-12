@@ -1,3 +1,4 @@
+// @ts-ignore
 import "./globals.css";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "João Clevelares | Links",
     description: "Conecte-se com João",
-    url: "https://links.joaoclev.dev.br",
+    url: "https://joaoclev.com",
     siteName: "João - Links",
     images: [
       {
@@ -61,7 +62,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
           toastOptions={{
             success: {
               style: {
-                background: "#f0f0f0"
+                background: "#f0f0f0",
               },
               iconTheme: {
                 primary: "#000",

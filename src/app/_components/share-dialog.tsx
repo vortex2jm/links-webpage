@@ -52,10 +52,10 @@ export default function ShareDialog() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 50 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="fixed bottom-24 z-50 w-72 rounded-4xl p-6 py-10 shadow-lg bg-black dark:bg-white"
+              className="fixed bottom-24 z-50 w-72 rounded-2xl p-6 py-10 shadow-lg bg-white dark:bg-black"
               onClick={(e) => e.stopPropagation()}
             >
-              <h2 className="text-2xl font-geist font-bold mb-2 text-white dark:text-black text-center">
+              <h2 className="text-2xl font-geist font-bold mb-2 text-black dark:text-white text-center">
                 Compartilhar
               </h2>
               <div className="w-15 h-0.5 bg-amber-700 mx-auto mb-4 rounded-full" />

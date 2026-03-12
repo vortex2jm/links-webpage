@@ -3,7 +3,6 @@ import { FaBlog } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { PiEyeFill } from "react-icons/pi";
 import { FaLinkedin } from "react-icons/fa";
-import { IoGlobeOutline } from "react-icons/io5";
 import { GrPersonalComputer } from "react-icons/gr";
 
 interface Link {
@@ -42,11 +41,6 @@ export const links: Link[] = [
     title: "CyVex",
     url: "https://cyvex.com.br",
     icon: GrPersonalComputer
-  },
-  {
-    title: "Resume",
-    url: "https://joaoclev.com",
-    icon: IoGlobeOutline
   },
 ];
 
