@@ -64,7 +64,7 @@ export default function ShareDialog() {
                   <button
                     onClick={copyToClipboard}
                     className="w-full flex justify-center items-center gap-2 px-4 py-2 rounded-full transition font-normal 
-                    text-neutral-400 dark:text-neutral-600 cursor-pointer transform hover:translate-x-1"
+                    text-neutral-400 dark:text-neutral-600 cursor-pointer transform hover:translate-x-1 hover:text-foreground"
                   >
                     <MdContentCopy size={20} /> Copiar link
                   </button>
@@ -77,7 +77,7 @@ export default function ShareDialog() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full flex justify-center items-center gap-2 px-4 py-2 rounded-full transition font-normal 
-                    text-neutral-400 dark:text-neutral-600 transform hover:translate-x-1"
+                    text-neutral-400 dark:text-neutral-600 transform hover:translate-x-1 hover:text-foreground"
                   >
                     <BsWhatsapp size={20} /> WhatsApp
                   </a>
