@@ -55,7 +55,7 @@ export default function ShareDialog() {
               className="fixed bottom-24 z-50 w-72 rounded-2xl p-6 py-10 shadow-lg bg-white dark:bg-black"
               onClick={(e) => e.stopPropagation()}
             >
-              <h2 className="text-2xl font-geist font-bold mb-2 text-black dark:text-white text-center">
+              <h2 className="text-2xl font-bold mb-2 text-black dark:text-white text-center">
                 Compartilhar
               </h2>
               <div className="w-15 h-0.5 bg-amber-700 mx-auto mb-4 rounded-full" />

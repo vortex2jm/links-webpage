@@ -2,17 +2,49 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
-import { Geist, Noto_Sans } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { Noto_Sans, Plus_Jakarta_Sans } from "next/font/google";
 
 const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
   subsets: ["latin"],
 });
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
+  subsets: ["latin"],
+});
+
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
+  return (
+    <html lang="pt">
+      <body
+        className={`
+          ${notoSans.variable} 
+          ${plusJakartaSans.variable} 
+          antialiased
+        `}
+      >
+        {children}
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            success: {
+              style: {
+                background: "#f0f0f0",
+              },
+              iconTheme: {
+                primary: "#000",
+                secondary: "#fff"
+              }
+            }
+          }}
+        />
+      </body>
+    </html>
+  );
+}
+
 
 export const metadata: Metadata = {
   title: "João Clevelares | Links",
@@ -47,31 +79,3 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-
-
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
-  return (
-    <html lang="pt">
-      <body
-        className={`${geistSans.variable} ${notoSans.variable} antialiased`}
-      >
-        {children}
-        <Toaster
-          position="top-center"
-          reverseOrder={false}
-          toastOptions={{
-            success: {
-              style: {
-                background: "#f0f0f0",
-              },
-              iconTheme: {
-                primary: "#000",
-                secondary: "#fff"
-              }
-            }
-          }}
-        />
-      </body>
-    </html>
-  );
-}

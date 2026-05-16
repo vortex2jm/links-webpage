@@ -10,9 +10,9 @@ export default function Home() {
         <Image src={"https://avatars.githubusercontent.com/u/93965248?v=4"} alt="profile photo" width={150} height={150} priority></Image>
       </div>
       <div className="flex flex-col justify-center items-center mb-10 text-center">
-        <h2 className="font-geist font-bold text-2xl">{user.name}</h2>
+        <h2 className="font-bold text-2xl">{user.name}</h2>
         <div className="w-15 h-0.5 bg-amber-700 mx-auto mt-1 rounded-full" />
-        <span className="text-neutral-500 font-normal font-geist mt-2 max-w-4/5">
+        <span className="text-neutral-500 font-normal mt-2 max-w-4/5">
           {user.description}
         </span>
       </div>
